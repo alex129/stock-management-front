@@ -2,7 +2,7 @@
 import { ref, onMounted, reactive } from "vue";
 import axios from "axios";
 
-const baseUrl = "http://pdpaola.backend.test";
+const baseUrl = process.env.BASE_URL;
 
 interface Product {
      id: number;

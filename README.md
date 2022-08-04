@@ -1,6 +1,6 @@
 # Installation
 
-In Products file there is a constant called baseUrl. You must to change with the base URL backend
+Change the BASE_URL variable to base_url of the backend project
 
 RUN:
 
