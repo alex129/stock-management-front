@@ -2,6 +2,8 @@
 import { ref, onMounted, reactive } from "vue";
 import axios from "axios";
 
+const baseUrl = "http://pdpaola.backend.test";
+
 interface Product {
      id: number;
      name: string;
@@ -22,7 +24,8 @@ onMounted(() => {
 });
 
 const fetchData = () => {
-     axios.get("http://pdpaola.backend.test/api/products")
+     const url = baseUrl + '/api/products';
+     axios.get(url)
           .then((res) => {
                console.log(res.data);
                state.products = res.data;
@@ -33,7 +36,8 @@ const fetchData = () => {
 };
 
 const addMovemement = (product: Product, quantity) => {
-     axios.post("http://pdpaola.backend.test/api/movements", {product_id: product.id, quantity}).then((res) => {
+     const url = baseUrl + '/api/movements';
+     axios.post(url, {product_id: product.id, quantity}).then((res) => {
                console.log(res.data);
                fetchData();
           })
