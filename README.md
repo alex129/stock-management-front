@@ -1,6 +1,6 @@
 # Installation
 
-Change the BASE_URL variable to base_url of the backend project
+Change the BASE_URL variable to base url of the backend project
 
 RUN:
 
